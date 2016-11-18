@@ -35,4 +35,11 @@ public class HistogramTest {
 
         verify(reservoir).update(1);
     }
+    
+    @Test
+    public void updatesTheReservoidWithDoubles() throws Exception {
+    	histogram.update(1.0);
+    	
+    	verify(reservoir).update(1);
+    }
 }

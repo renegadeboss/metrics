@@ -28,6 +28,15 @@ public class Histogram implements Metric, Sampling, Counting {
     public void update(int value) {
         update((long) value);
     }
+    
+    /**
+     * Adds a recorded value. 
+     * 
+     * @param value the length of the value
+     */
+    public void update(double value) {
+    	update(Math.round(value));
+    }
 
     /**
      * Adds a recorded value.
